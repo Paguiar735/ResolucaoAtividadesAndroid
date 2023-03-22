@@ -1,6 +1,7 @@
 package pck_principal;
 
 public class Principal {
+/*classe principal para executar as demais classes do projeto*/
     public static void main() {
 //        DAO_Unidades obj_unidades = new DAO_Unidades();
 //        DAO_Produtos obj_produtos = new DAO_Produtos();
