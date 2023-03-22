@@ -6,9 +6,9 @@ import java.util.logging.Logger;
 
 public class Conexao {
     
-    private String caminho = "jdbc:mysql://localhost:3306/comabem";
+    private String caminho = "jdbc:mysql://localhost:3306/ComaBem";
     private String usuario = "root";
-    private String senha = "vip12345";
+    private String senha = "root";
     public Connection conn;
    
     
@@ -16,7 +16,7 @@ public class Conexao {
     {
         try 
         {
-            conn=DriverManager.getConnection(caminho,usuario,senha);
+            conn=DriverManager.getConnection(caminho,usuario, senha);
             System.out.println("CONECTADO COM SUCESSO!!!");
         } 
         catch (SQLException ex) 
@@ -44,6 +44,6 @@ public class Conexao {
     public static void main(String[] args) {
         Conexao obj_conexao = new Conexao();
         obj_conexao.conexao();
-
+        Principal.main();
     }
 }

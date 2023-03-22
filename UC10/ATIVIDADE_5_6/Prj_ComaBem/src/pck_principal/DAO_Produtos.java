@@ -8,11 +8,11 @@ public class DAO_Produtos {
     
     public void consultar(){
         obj_conexao.conexao();
-        Statement stm = null; 
-        ResultSet rs = null; 
+        Statement stm; 
+        ResultSet rs; 
         try {
             stm = obj_conexao.conn.createStatement();
-            rs = stm.executeQuery("select * from produtos");
+            rs = stm.executeQuery("select * from Produtos");
             while (rs.next())
                 System.out.println(rs.getInt(1) +
                         "  " + rs.getString(2) +
@@ -27,7 +27,7 @@ public class DAO_Produtos {
     
     public void inserir(Produto p){
         obj_conexao.conexao();
-        PreparedStatement pst = null;
+        PreparedStatement pst;
         String sql = "INSERT INTO Produtos (cd_produto, ds_produto, vl_produto, qt_produto, cd_unidade) VALUES (?,?,?,?,?)";
         try {
             pst = obj_conexao.conn.prepareStatement(sql);
@@ -45,8 +45,8 @@ public class DAO_Produtos {
     
     public void alterar(Produto p){
         obj_conexao.conexao();
-        PreparedStatement pst = null;
-        ResultSet rs = null;
+        PreparedStatement pst;
+        ResultSet rs;
         String sql = "UPDATE Produtos set ds_produto=?, vl_produto=?, qt_produto=?, cd_unidade=? WHERE cd_produto=?";
         
         try {
@@ -65,7 +65,7 @@ public class DAO_Produtos {
     
     public void excluir(int id){
         obj_conexao.conexao();
-        PreparedStatement pst = null;
+        PreparedStatement pst;
         String sql = "DELETE from Produtos  WHERE cd_produto=?";
         
         try {
