@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+  <item>
+    <shape android:shape="rectangle">
+      <solid android:color="@android:color/black" />
+    </shape>
+  </item>
+  <item
+      android:gravity="center"
+      android:width="300dp"
+      android:height="300dp"
+      android:drawable="@drawable/ic_splash_background" />
+  <item
+      android:gravity="center"
+      android:width="200dp"
+      android:height="200dp"
+      android:drawable="@drawable/ic_splash_foreground" />
+</layer-list>
