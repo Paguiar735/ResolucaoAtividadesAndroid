@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">UC11</string>
+    <string name="add_items">Adicionar</string>
+    <string name="list_items">Listar</string>
 </resources>
